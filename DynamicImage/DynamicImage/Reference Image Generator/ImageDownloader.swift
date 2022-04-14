@@ -49,7 +49,7 @@ class ImageDownloader{
   static let BASE_PATH = "https://upload.wikimedia.org/wikipedia/commons/f/f2/Chocolate.jpg?20150126212847"
   
   static let payloadData: [ReferenceImagePayload] = [
-    ReferenceImagePayload(name: "sally", extensionType: FileSuffix.JPEG.name, orientation: .up, widthInM: 0.1),/*
+    ReferenceImagePayload(name: "cony", extensionType: FileSuffix.JPEG.name, orientation: .up, widthInM: 0.1),/*
     ReferenceImagePayload(name: "choco", extensionType: FileSuffix.JPEG.name, orientation: .up, widthInM: 0.1),
     ReferenceImagePayload(name: "cony", extensionType: FileSuffix.JPEG.name, orientation: .up, widthInM: 0.1),
     ReferenceImagePayload(name: "brown", extensionType: FileSuffix.JPEG.name, orientation: .up, widthInM: 0.1)*/

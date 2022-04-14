@@ -8,6 +8,8 @@
 
 import Foundation
 import ARKit
+import AVKit
+import AVFoundation
 
 class VideoNode: SCNNode{
   
@@ -29,10 +31,12 @@ class VideoNode: SCNNode{
     var videoPlayer = AVPlayer()
     
     //3. If We Have A Valid Name & A Valid Video URL The Instanciate The AVPlayer
-    if let targetName = target.name,
-      let validURL = Bundle.main.url(forResource: targetName + "Movie", withExtension: "mp4", subdirectory: nil) {
-      videoPlayer = AVPlayer(url: validURL)
-      videoPlayer.play()
+      if let theURL = URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"){
+      let videoAsset =  AVAsset(url: theURL)
+      let videoPlayerItem = AVPlayerItem(asset: videoAsset)
+    // Initialize player with the AVPlayerItem instance.
+        videoPlayer = AVPlayer(playerItem: videoPlayerItem)
+          videoPlayer.play()
     }
     
     //4. Assign The AVPlayer & The Geometry To The Video Player
